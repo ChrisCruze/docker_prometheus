@@ -11,7 +11,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 sudo yum install git -y
 
 git init .
-git remote add origin https://github.com/ChrisCruze/docker_grafana
+git remote add origin https://github.com/ChrisCruze/docker_prometheus
 git fetch origin
 git checkout master
 
