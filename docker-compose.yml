@@ -28,3 +28,9 @@ services:
     container_name: redis
     ports:
     - 6379:6379
+  node-exporter:
+    image: prom/node-exporter:latest
+    container_name: monitoring_node_exporter
+    restart: unless-stopped
+    ports:
+      - 9100:9100

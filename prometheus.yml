@@ -8,7 +8,7 @@ scrape_configs:
     static_configs:
     - targets: ['localhost:9090']
       labels:
-        group: 'prometheus'
+        group: 'local'
   - job_name: 'cadvisor'
     static_configs:
     - targets: ['3.16.212.239:8080']
@@ -20,3 +20,20 @@ scrape_configs:
     - targets: ['3.138.141.1:8080']
       labels:
         group: 'jupyter'
+    - targets: ['localhost:8080']
+      labels:
+        group: 'prometheus'  
+  - job_name: 'node'
+    static_configs:
+    - targets: ['3.16.212.239:9100']
+      labels:
+        group: 'flask'
+    - targets: ['52.14.53.139:9100']
+      labels:
+        group: 'grafana'
+    - targets: ['3.138.141.1:9100']
+      labels:
+        group: 'jupyter'
+    - targets: ['localhost:9100']
+      labels:
+        group: 'prometheus'
