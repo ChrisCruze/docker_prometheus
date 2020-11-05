@@ -8,30 +8,30 @@ scrape_configs:
     static_configs:
     - targets: ['3.16.212.239:9090']
       labels:
-        group: 'flask'
+        ec2_name: 'flask'
         exporter: 'prometheus'
     - targets: ['3.138.141.1:9090']
       labels:
-        group: 'jupyter'
+        ec2_name: 'jupyter'
         exporter: 'prometheus'
   - job_name: 'cadvisor'
     static_configs:
     - targets: ['3.16.212.239:8080']
       labels:
-        group: 'flask'
+        ec2_name: 'flask'
         exporter: 'cadvisor'
     - targets: ['3.138.141.1:8080']
       labels:
-        group: 'jupyter'
+        ec2_name: 'jupyter'
         exporter: 'cadvisor'
   - job_name: 'node'
     static_configs:
     - targets: ['3.16.212.239:9100']
       labels:
-        group: 'flask'
+        ec2_name: 'flask'
         exporter: 'node'
     - targets: ['3.138.141.1:9100']
       labels:
-        group: 'jupyter'
+        ec2_name: 'jupyter'
         exporter: 'node'
 
